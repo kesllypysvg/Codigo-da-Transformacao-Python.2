@@ -1,0 +1,23 @@
+def pedir_idade():
+    """
+    Solicita a idade do usuário e garante que a entrada seja um número
+    inteiro positivo.
+    """
+    while True:
+        try:
+            idade = int(input("Por favor, digite sua idade: "))
+            
+            # Condição para garantir que a idade é positiva
+            if idade > 0:
+                print(f"Sua idade, {idade}, foi validada com sucesso!")
+                return idade
+            else:
+                print("Idade inválida. Por favor, digite um número maior que zero.")
+        
+        except ValueError:
+            # Captura o erro se o usuário digitar algo que não seja um número inteiro
+            print("Entrada inválida. Por favor, digite um número inteiro.")
+
+# Chamando a função para obter a idade do usuário
+idade_do_usuario = pedir_idade()
+print(f"O programa continuará com a idade: {idade_do_usuario}")
