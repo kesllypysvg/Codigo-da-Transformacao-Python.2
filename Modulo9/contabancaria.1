@@ -1,0 +1,10 @@
+class SaldoInsuficienteError(Exception):
+    """
+    Exceção personalizada para representar a falta de saldo em uma conta.
+    """
+    def __init__(self, saldo_atual, valor_saque):
+        self.saldo_atual = saldo_atual
+        self.valor_saque = valor_saque
+        mensagem = (f"Não foi possível realizar o saque. Saldo atual é R${saldo_atual:.2f}, "
+                    f"mas o valor do saque é R${valor_saque:.2f}.")
+        super().__init__(mensagem)
