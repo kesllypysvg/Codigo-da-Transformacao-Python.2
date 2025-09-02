@@ -1,0 +1,18 @@
+# --- Demonstração do programa ---
+
+minha_conta = ContaBancaria("João", 1000)
+
+# Tentativa de saque bem-sucedida
+try:
+    minha_conta.sacar(500)
+except SaldoInsuficienteError as e:
+    print(f"Erro: {e}")
+
+# Tentativa de saque que irá falhar
+print("\nTentando sacar um valor maior que o saldo...")
+try:
+    minha_conta.sacar(800)
+except SaldoInsuficienteError as e:
+    print(f"Erro: {e}")
+
+minha_conta.verificar_saldo()

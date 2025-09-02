@@ -1,0 +1,32 @@
+class Carro:
+    """
+    Uma classe para representar um carro.
+    """
+    def __init__(self, marca, modelo, ano):
+        """
+        O método construtor da classe.
+        Ele é chamado quando um novo objeto (instância) é criado.
+        
+        Args:
+            marca (str): A marca do carro.
+            modelo (str): O modelo do carro.
+            ano (int): O ano de fabricação do carro.
+        """
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+    
+    def exibir_info(self):
+        """
+        Exibe as informações detalhadas do carro.
+        """
+        print("--- Informações do Carro ---")
+        print(f"Marca: {self.marca}")
+        print(f"Modelo: {self.modelo}")
+        print(f"Ano: {self.ano}")
+        print("-" * 25)
+
+# --- Criando objetos (instâncias) da classe Carro ---
+
+# Criando um carro da marca Ford, modelo Focus
+carro1 = Carro("Ford", "Focus", 2020)

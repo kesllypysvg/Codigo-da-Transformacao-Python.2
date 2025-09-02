@@ -1,0 +1,11 @@
+ # Definindo os dois números inteiros
+numero1 = 10
+numero2 = 5
+
+# Compara os dois números para determinar qual é o maior
+if numero1 > numero2:
+    print(f"O maior número é: {numero1}")
+elif numero2 > numero1:
+    print(f"O maior número é: {numero2}")
+else:
+    print("Os dois números são iguais.")

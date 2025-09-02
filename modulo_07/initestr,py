@@ -1,0 +1,51 @@
+class Livro:
+    """
+    Uma classe para representar um livro, usando métodos especiais.
+    """
+    
+    def __init__(self, titulo, autor, paginas):
+        """
+        Método Construtor: Inicializa os atributos do livro.
+        
+        Este método é chamado automaticamente quando um novo objeto (livro) é criado.
+        Ele permite que você passe os valores iniciais para o objeto.
+        """
+        self.titulo = titulo
+        self.autor = autor
+        self.paginas = paginas
+    
+    def __str__(self):
+        """
+        Método de Representação em String: Retorna uma representação
+        legível do objeto para humanos.
+        
+        Este método é chamado automaticamente por funções como print().
+        """
+        return f'"{self.titulo}" por {self.autor}, com {self.paginas} páginas.'
+    
+    def __len__(self):
+        """
+        Método de Comprimento: Retorna o número de páginas do livro.
+        
+        Este método é chamado quando a função len() é usada no objeto.
+        """
+        return self.paginas
+
+# --- Criando objetos da classe Livro ---
+
+livro1 = Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1200)
+livro2 = Livro("1984", "George Orwell", 328)
+
+# --- Exibindo os objetos com print() ---
+
+# O método __str__() é chamado automaticamente aqui
+print("\n--- Exibição com __str__ ---")
+print(livro1)
+print(livro2)
+
+# --- Usando a função len() ---
+
+# O método __len__() é chamado aqui
+print("\n--- Exibição com __len__ ---")
+print(f'O livro "{livro1.titulo}" tem {len(livro1)} páginas.')
+print(f'O livro "{livro2.titulo}" tem {len(livro2)} páginas.')
